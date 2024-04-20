@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
+from cart.forms import CartAddProductForm  # Убрать/добавить .. чтобы не было ошибок
 
 
 def index(request):
@@ -25,6 +26,6 @@ def product_detail(request, id, slug):
                                 id=id,
                                 slug=slug,
                                 available=True)
-    return render(request,
-                  'myapp/product/detail.html',
-                  {'product': product})
+    cart_product_form = CartAddProductForm()
+    return render(request, 'myapp/product/detail.html',
+                  {'product': product, 'cart_product_form': cart_product_form})

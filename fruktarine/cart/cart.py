@@ -1,6 +1,6 @@
 from decimal import Decimal
 from django.conf import settings
-from ..myapp.models import Product
+from myapp.models import Product  # Убрать/добавить .. чтобы не было ошибок
 
 
 class Cart(object):

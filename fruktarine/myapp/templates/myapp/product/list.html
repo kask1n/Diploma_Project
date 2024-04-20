@@ -5,10 +5,10 @@
 {% endblock %}
 {% block content %}
     <div id="sidebar">
-        <h3>Categories</h3>
+        <h3>Категории</h3>
         <ul>
             <li {% if not category %}class="selected"{% endif %}>
-                <a href="{% url "myapp:product_list" %}">All</a>
+                <a href="{% url "myapp:product_list" %}">Все</a>
             </li>
             {% for c in categories %}
                 <li {% if category.slug == c.slug %}class="selected"{% endif %}>
