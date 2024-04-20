@@ -1,8 +1,10 @@
 {% extends "myapp/base.html" %}
 {% load static %}
+
 {% block title %}
     Ваша корзина покупок
 {% endblock %}
+
 {% block content %}
     <h1>Ваша корзина покупок</h1>
     <table class="cart">
@@ -22,11 +24,8 @@
                 <tr>
                     <td>
                         <a href="{{ product.get_absolute_url }}">
-                            <img src="
-                                {% if product.image %}
-                                    {{ product.image.url }}
-                                {% else %}
-                                    {% static "img/no_image.png" %}
+                            <img src="{% if product.image %}{{ product.image.url }}
+                                {% else %}{% static "img/no_image.png" %}
                                 {% endif %}">
                         </a>
                     </td>
@@ -47,6 +46,6 @@
     </table>
     <p class="text-right">
         <a href="{% url "myapp:product_list" %}" class="button light">Продолжить покупки</a>
-        <a href="#" class="button">Оформить заказ</a>
+        <a href="{% url "orders:order_create" %}" class="button">Оформить заказ</a>
     </p>
 {% endblock %}

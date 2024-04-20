@@ -12,7 +12,25 @@
 </div>
 <div id="subheader">
     <div class="cart">
-        Ваша корзина пуста.
+        {% with total_items=cart|length %}
+            {% if cart|length > 0 %}
+                Ваша корзина:
+                <a href="{% url "cart:cart_detail" %}">
+                    {{ total_items }}
+<!--                    склонения для разного количества товаров-->
+                    {% if total_items == 1 or total_items == 21 %}
+                        товар
+                    {% elif total_items >= 2 and total_items <= 4 or total_items >= 22 and total_items <= 24%}
+                        товара
+                    {% else %}
+                        товаров
+                    {% endif %}
+                    {{ cart.get_total_price }} р.
+                </a>
+            {% else %}
+                Ваша корзина пуста.
+            {% endif %}
+        {% endwith %}
     </div>
 </div>
 <div id="content">
