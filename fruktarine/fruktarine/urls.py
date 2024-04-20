@@ -21,7 +21,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('myapp.urls', namespace='myapp')),
+    path('cart/', include('cart.urls', namespace='cart')),
+    path('', include('myapp.urls', namespace='myapp')),  # должен быть последним
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
