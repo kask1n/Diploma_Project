@@ -17,12 +17,12 @@ def order_create(request):
                                          product=item['product'],
                                          price=item['price'],
                                          quantity=item['quantity'])
-                message = message + f"{item['product']} {item['price']} x {item['quantity']} = {item['total_price']}\n"
+                message = message + f"{item['product']} {item['price']} x {item['quantity']} = {item['total_price']}р.\n"
             # уведомление в телеграм
             message = message + (f'Заказчик: {order.name}\nТелефон: {order.phone}\n'
                                  f'Адрес доставки: {order.address}\n'
                                  f'Дата доставки: {order.date_delivery.strftime("%d.%m.%Y")}\n'
-                                 f'Комментарий: {order.comment}\nИтого: {order.get_total_cost()} р.')
+                                 f'Комментарий: {order.comment}\nИтого: {order.get_total_cost()}р.')
 
             # очистка корзины
             cart.clear()

@@ -1,7 +1,12 @@
+import os
 import requests
 import logging
+from dotenv import load_dotenv
 
-TOKEN = "6727424585:AAHqvOXEtmu56O7JdvONa20kl8Gezwl1X_Y"
+load_dotenv()
+
+TOKEN = os.getenv('tel_bot')
+chat_id = os.getenv('chat_id')  #Сообщение Диме
 logger = logging.getLogger(__name__)
 
 
@@ -12,7 +17,6 @@ def get_update_telegram():
 
 
 def send_by_telegram(message):
-    chat_id = "37358423"  #Сообщение Диме
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={chat_id}&text={message}"
     try:
         requests.get(url).json()
@@ -22,4 +26,4 @@ def send_by_telegram(message):
 
 
 if __name__ == '__main__':
-    send_by_telegram('тест сообщения7')
+    send_by_telegram('тест сообщения11')
