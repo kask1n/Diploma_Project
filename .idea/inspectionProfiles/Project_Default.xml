@@ -1,0 +1,48 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="cart:cart_detail" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="list.compare_averages" />
+          <option value="list.calculate_average" />
+          <option value="myproject.myapp2.management.commands.create_user.myapp2" />
+          <option value="myproject.myapp2.management.commands.get_all_users.myapp2" />
+          <option value="myproject.myapp2.management.commands.get_user.myapp2" />
+          <option value="myproject.myapp2.management.commands.update_user.myapp2" />
+          <option value="myproject.myapp2.management.commands.delete_user.myapp2" />
+          <option value="homework_1.hw_app2.management.commands.create_client.hw_app2" />
+          <option value="homework_1.hw_app2.management.commands.create_product.hw_app2" />
+          <option value="homework_1.hw_app2.management.commands.create_order.hw_app2" />
+          <option value="homework_1.hw_app2.management.commands.get_client.hw_app2" />
+          <option value="homework_1.hw_app2.management.commands.update_client.hw_app2" />
+          <option value="homework_1.hw_app2.management.commands.delete_client.hw_app2" />
+          <option value="myproject.myproject.urls.myapp3" />
+          <option value="myproject.myapp3.management.commands.fill_db.myapp3" />
+          <option value="homework_1.hw_app3.management.commands.commands.hw_app3" />
+          <option value="myproject.myapp4.views.myapp4" />
+          <option value="homework_1.hw_app4.management.commands.commands4.hw_app4" />
+          <option value="homework_1.homework_1.urls.hw_app4" />
+          <option value="homework_1.homework_1.urls.hw_app3" />
+          <option value="myproject.myapp6.management.commands.make_products.myapp5" />
+          <option value="myproject.myapp6.views.myapp5" />
+          <option value="fruktarine.myapp.views.cart" />
+          <option value="fruktarine.cart.views.myapp" />
+          <option value="fruktarine.cart.cart.myapp" />
+          <option value="fruktarine.orders.models.myapp" />
+          <option value="fruktarine.orders.views.cart" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
