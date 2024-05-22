@@ -33,7 +33,7 @@ CSRF_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'fruktarine.pythonanywhere.com',
+    # 'fruktarine.pythonanywhere.com',
 ]
 
 
@@ -97,10 +97,12 @@ WSGI_APPLICATION = 'fruktarine.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'fruktarine$default',
+        # 'NAME': 'fruktarine$default',
+        'NAME': 'default',
         'USER': 'fruktarine',
         'PASSWORD': os.getenv('MYSQL_PASSWORD'),
-        'HOST': 'fruktarine.mysql.pythonanywhere-services.com',
+        # 'HOST': 'fruktarine.mysql.pythonanywhere-services.com',
+        'HOST': '127.0.0.1',
         'OPTIONS': {
             'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
